@@ -1,5 +1,7 @@
 import Vapor
-import FluentSQLite
+//import FluentSQLite
+//import FluentMySQL
+import FluentPostgreSQL
 
 final class Acronym: Codable {
     var id: Int?
@@ -20,7 +22,9 @@ final class Acronym: Codable {
 //    public static var idKey: IDKey = \Acronym.id
 //}
 
-extension Acronym: SQLiteModel {}
+//extension Acronym: SQLiteModel {}
+//extension Acronym: MySQLModel {}
+extension Acronym: PostgreSQLModel {}
 
 extension Acronym: Migration {}
 
